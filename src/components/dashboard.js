@@ -1,5 +1,12 @@
+import AuthUser from './AuthUser'
+
 export default function Dashbord(){
+    const {user} = AuthUser();
     return (
-        <div>Tableau de bord</div>
-    )
+      <div>
+        <h4>Bienvenue {user.name}</h4>
+        <p>mail : {user.email}</p>
+        
+      </div>
+    );
 }
