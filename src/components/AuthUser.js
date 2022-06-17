@@ -18,7 +18,6 @@ export default function AuthUser() {
   };
   const [token,setToken] = useState(getToken());
   const [user, setUser] = useState(getUser());
-
   
 
   const saveToken = (user,token)=> {
@@ -39,6 +38,7 @@ export default function AuthUser() {
     baseURL: "http://127.0.0.1:8000/api",
     headers: {
       "Content-type": "application/json",
+      "Authorization": `Bearer ${token}`
     },
   });
 
